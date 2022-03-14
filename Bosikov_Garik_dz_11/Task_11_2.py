@@ -1,6 +1,3 @@
-# Задание 2
-
-
 class DevisionByZero(Exception):
     __default_msg = 'Деление на ноль!!!'
 

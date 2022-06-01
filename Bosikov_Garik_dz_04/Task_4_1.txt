@@ -1,0 +1,64 @@
+gbosikov@gbosikov:~/Desktop/homework$ pip show pillow
+Name: Pillow
+Version: 9.0.1
+Summary: Python Imaging Library (Fork)
+Home-page: https://python-pillow.org
+Author: Alex Clark (PIL Fork Author)
+Author-email: aclark@python-pillow.org
+License: HPND
+Location: /usr/local/lib/python3.8/dist-packages
+Requires:
+Required-by:
+gbosikov@gbosikov:~/Desktop/homework$ sudo pip install --upgrade Pillow
+Requirement already up-to-date: Pillow in /usr/local/lib/python3.8/dist-packages (9.0.1)
+gbosikov@gbosikov:~/Desktop/homework$ python3 --version
+Python 3.8.10
+gbosikov@gbosikov:~/Desktop/homework$ apt install python3.8-venv
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+gbosikov@gbosikov:~/Desktop/homework$ sudo apt install python3.8-venv
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter
+  libnginx-mod-mail libnginx-mod-stream nginx-common nginx-core
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  python3.8-venv
+0 upgraded, 1 newly installed, 0 to remove and 127 not upgraded.
+Need to get 5.444 B of archives.
+After this operation, 27,6 kB of additional disk space will be used.
+Get:1 http://ge.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python3.8-venv amd64 3.8.10-0ubuntu1~20.04.2 [5.444 B]
+Fetched 5.444 B in 1s (9.551 B/s)
+Selecting previously unselected package python3.8-venv.
+(Reading database ... 193463 files and directories currently installed.)
+Preparing to unpack .../python3.8-venv_3.8.10-0ubuntu1~20.04.2_amd64.deb ...
+Unpacking python3.8-venv (3.8.10-0ubuntu1~20.04.2) ...
+Setting up python3.8-venv (3.8.10-0ubuntu1~20.04.2) ...
+gbosikov@gbosikov:~/Desktop/homework$ python -m venv homework-virt
+/usr/bin/python: No module named venv
+gbosikov@gbosikov:~/Desktop/homework$ python3.8 -m venv homework-virt
+gbosikov@gbosikov:~/Desktop/homework$ ls --all
+.  ..  homework-virt
+gbosikov@gbosikov:~/Desktop/homework$ source homework-virt/bin/activate
+(homework-virt) gbosikov@gbosikov:~/Desktop/homework$ pip freeze
+(homework-virt) gbosikov@gbosikov:~/Desktop/homework$ pip show pillow
+WARNING: Package(s) not found: pillow
+(homework-virt) gbosikov@gbosikov:~/Desktop/homework$ pip install pillow==9.0.0
+Collecting pillow==9.0.0
+  Using cached Pillow-9.0.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.3 MB)
+Installing collected packages: pillow
+Successfully installed pillow-9.0.0
+(homework-virt) gbosikov@gbosikov:~/Desktop/homework$ pip show pillow
+Name: Pillow
+Version: 9.0.0
+Summary: Python Imaging Library (Fork)
+Home-page: https://python-pillow.org
+Author: Alex Clark (PIL Fork Author)
+Author-email: aclark@python-pillow.org
+License: HPND
+Location: /home/gbosikov/Desktop/homework/homework-virt/lib/python3.8/site-packages
+Requires:
+Required-by:
+(homework-virt) gbosikov@gbosikov:~/Desktop/homework$

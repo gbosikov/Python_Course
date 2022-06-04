@@ -1,14 +1,16 @@
-a = ("Процент")
-b = ("Процента")
-c = ("Процентов")
-numbs = {11,12,13,14}
-for i in range(100):
-    i = i + 1
-    if i in numbs:
-        print(i, "процентов")
-    elif i % 10 == 1:
-        print(i, "процент")
-    elif i % 10 > 1 and i % 10 <5:
-        print(i, "процента")
-    else:
-        print(i, "процентов")
+def transform_string(number: int) -> str:
+    """Возвращает строку вида 'N процентов' с учётом склонения по указанному number"""
+    lst = [2, 3, 4]
+    out = str
+    if number == 1:
+        out = f'{number} {a}'
+    elif number in lst:
+        out = f'{number} {b}'
+    elif number in range(4, 101):
+        out = f'{number} {c}'
+
+    return out
+
+
+for n in range(1, 101):  # по заданию учитываем только значения от 1 до 100
+    print(transform_string(n))
